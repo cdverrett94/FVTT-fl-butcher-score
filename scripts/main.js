@@ -56,12 +56,12 @@ const generateButcherTable = (actor) => {
 Hooks.on("renderForbiddenLandsCharacterSheet", async (sheet, $html) => {
     const html = $html[0];
 
-    html.querySelector('.sheet-tabs.tabs[data-group="primary"]').innerHTML += '<b class="tab-item" data-tab="butcher">butcher</b>';
-    html.querySelector('.sheet-body').innerHTML += `
+    html.querySelector('.sheet-tabs.tabs[data-group="primary"]').insertAdjacentHTML('beforeend','<b class="tab-item" data-tab="butcher">butcher</b>');
+    html.querySelector('.sheet-body').insertAdjacentHTML('beforeend',`
         <div class="tab" data-group="primary" data-tab="butcher">
             ${generateButcherTable(sheet.actor)}
         </div>
-    `;
+    `);
 
     html.querySelector('div.tab[data-tab="butcher"] i.fa-dice-d20').addEventListener('click', async (event) => {
         const empathyRoll = await sheet.rollAttribute('empathy');
