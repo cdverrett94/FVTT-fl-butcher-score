@@ -1,0 +1,29 @@
+.butcher-score-container { 
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.5rem;
+}
+.butcher-score-container i.fa-dice-d20 {
+    font-size: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+.butcher-score-container i.fa-dice-d20:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.current-butcher-score {
+    padding: 0px 10px;
+}
+.butcher-tiers .butcher-tier-header, .butcher-tiers .butcher-tier-row {
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    grid-template-areas:
+      'butcher-score butcher-effect';
+    padding: 5px;
+  }
+.butcher-tiers .butcher-tier-row:not(.butcher-tier-met) {
+    color: rgba(0,0,0,.3);
+}

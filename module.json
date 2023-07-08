@@ -1,0 +1,27 @@
+{
+  "name": "fl-butcher-score",
+  "title": "fl-butcher-score",
+  "description": "",
+  "author": "shortyverrett94 - shortyverrett94#4531",
+  "version": "0.0.1",
+  "minimumCoreVersion": "",
+  "compatibleCoreVersion": "",
+  "scripts": ["scripts/main.js"],
+  "esmodules": [],
+  "styles": ["styles/main.css"],
+  "packs": [],
+  "languages": [],
+  "relationships" : {
+    "systems": [{
+      "id": "forbidden-lands",
+      "type": "system"
+    }]
+  },
+  "authors": [],
+  "socket": false,
+  "url": "https://github.com/cdverrett94/FVTT-fl-butcher-score",
+  "bugs": "https://github.com/cdverrett94/FVTT-fl-butcher-score/issues",
+  "manifest": "https://github.com/cdverrett94/FVTT-fl-butcher-score/releases/latest/download/module.json",
+  "download": "https://github.com/cdverrett94/FVTT-fl-butcher-score/releases/download/0.1.0/package.zip",
+  "changelog": "https://github.com/cdverrett94/FVTT-fl-butcher-score/blob/main/Changelog.md"
+}
