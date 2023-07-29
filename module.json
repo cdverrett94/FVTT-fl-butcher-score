@@ -2,12 +2,16 @@
   "name": "FL Butcher Score",
   "title": "fl-butcher-score",
   "description": "A butcher score tracker.",
-  "author": "shortyverrett94 - shortyverrett94#4531",
+  "authors": [
+    {"name": "shortyverrett94"}
+  ],
   "version": "0.0.1",
-  "minimumCoreVersion": "",
-  "compatibleCoreVersion": "",
+  "compatibility": {
+    "minimum": 10,
+    "verified": 10,
+    "maximum": 10
+  },
   "scripts": ["scripts/main.js"],
-  "esmodules": [],
   "styles": ["styles/main.css"],
   "relationships" : {
     "systems": [{
@@ -15,7 +19,6 @@
       "type": "system"
     }]
   },
-  "authors": [],
   "socket": false,
   "url": "https://github.com/cdverrett94/FVTT-fl-butcher-score",
   "bugs": "https://github.com/cdverrett94/FVTT-fl-butcher-score/issues",
