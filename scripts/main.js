@@ -53,6 +53,21 @@ const generateButcherTable = (actor) => {
     `;
 }
 
+const updateScorePrompt = async () => {
+    const newScore = await Dialog.prompt({
+        title: `Update Butcher Score`,
+        content: `
+            <h1>New Butcher Score</h1>
+            <input type="number" min="0" id="new-butcher-score" />
+        `,
+        label: `Update Butcher Score`,
+        callback: (html) => parseInt(html.find('input').val()),
+        rejectClose: false,
+  });
+
+  return newScore;
+}
+
 Hooks.on("renderForbiddenLandsCharacterSheet", async (sheet, $html) => {
     const html = $html[0];
 
@@ -73,5 +88,13 @@ Hooks.on("renderForbiddenLandsCharacterSheet", async (sheet, $html) => {
         const newButcherScore = (sheet.actor.getFlag("fl-butcher-score", "current-score") ?? 0) + butcherRollTotal;
         butcherRoll.toMessage();
         await sheet.actor.setFlag("fl-butcher-score", "current-score", newButcherScore);
+    });
+
+    html.querySelector('.current-butcher-score').addEventListener('click', async (event) => {
+        let newButcherScore = await updateScorePrompt();
+        if(newButcherScore !== null) {
+            if(newButcherScore < 0) newButcherScore = 0;
+            await sheet.actor.setFlag("fl-butcher-score", "current-score", newButcherScore);
+        }
     });
 })

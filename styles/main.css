@@ -17,6 +17,9 @@
 .current-butcher-score {
     padding: 0px 10px;
 }
+.current-butcher-score:hover {
+    cursor: pointer;
+}
 .butcher-tiers .butcher-tier-header, .butcher-tiers .butcher-tier-row {
     display: grid;
     grid-template-columns: 1fr 15fr;
@@ -26,4 +29,8 @@
   }
 .butcher-tiers .butcher-tier-row:not(.butcher-tier-met) {
     color: rgba(0,0,0,.3);
+}
+
+#new-butcher-score {
+    margin-bottom: 5px;
 }

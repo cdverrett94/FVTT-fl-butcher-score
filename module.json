@@ -1,10 +1,7 @@
 {
-  "name": "FL Butcher Score",
-  "title": "fl-butcher-score",
+  "title": "FL Butcher Score",
+  "id": "fl-butcher-score",
   "description": "A butcher score tracker.",
-  "authors": [
-    {"name": "shortyverrett94"}
-  ],
   "version": "0.0.1",
   "compatibility": {
     "minimum": 10,
